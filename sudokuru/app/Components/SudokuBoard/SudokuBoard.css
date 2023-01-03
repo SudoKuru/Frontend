@@ -1,0 +1,29 @@
+.SudokuBoard {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    font-size : 20px;
+    text-align: center;
+    padding: 0px;
+    border: 1px solid black;
+    border-radius: 0%;
+    caret-color: rgba(0,0,0,0);
+}
+
+table {
+    border: 3px solid black;
+    border-collapse: collapse;
+    background-color: blanchedalmond;
+}
+
+td {
+    padding: 0;
+}
+
