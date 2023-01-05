@@ -17,6 +17,14 @@
     caret-color: rgba(0,0,0,0);
 }
 
+.hSquare {
+    border-bottom: 2px solid black;
+}
+
+.vSquare {
+    border-left: 2px solid black;
+}
+
 table {
     border: 3px solid black;
     border-collapse: collapse;
