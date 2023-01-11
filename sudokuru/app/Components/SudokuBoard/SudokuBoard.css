@@ -28,7 +28,7 @@
 table {
     border: 2px solid black;
     border-collapse: collapse;
-    background-color: blanchedalmond;
+    background-color: white;
 }
 
 td {
@@ -39,4 +39,8 @@ td {
     outline: none;
     box-shadow: none;
     background-color: rgba(25, 118, 210, 0.836);
+}
+
+#valis2 {
+    background-color: rgba(25, 118, 210, 0.288);
 }

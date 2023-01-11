@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Platform, View } from 'react-native'
 import './SudokuBoard.css'
-import { setStatusBarBackgroundColor } from 'expo-status-bar'
 
 const input = [
     [0, 7, 2, 1, 9, 3, 5, 6, 0], 
@@ -31,6 +30,20 @@ const SudokuBoard = () => {
         }
 
         setInput(grid);
+    }
+
+    function selectCell (e: React.ChangeEvent<HTMLInputElement>, row: number, col: number) {
+        console.log(row, col, e.target.id)
+
+        const target = document.getElementById(e.target.id);
+        target.style.backgroundColor = "grey";
+
+        var grid = parseJSON(inputArray);
+
+        grid[2][1] = 17;
+
+        setInput(grid);
+
     }
 
     return (
@@ -64,7 +77,9 @@ const SudokuBoard = () => {
                                             <input 
                                             value = {inputArray[row][col] === 0 ? '' : inputArray[row][col]} 
                                             onChange = {(e) => sanitizeCell(e, row, col)} 
-                                            className = 'cell' 
+                                            onFocus={(e) => selectCell(e, row, col)}
+                                            id = {"valis" + input[row][col].toString()}
+                                            className = 'cell'
                                             readOnly = {input[row][col] != 0}/>
                                         </td>
                                     })}
